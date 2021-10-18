@@ -21,10 +21,10 @@ export default {
     generate() {
       console.log(data);
       let picks = [
-        Math.floor(Math.random() * (data["1"].length + 1)),
-        Math.floor(Math.random() * (data["2"].length + 1)),
-        Math.floor(Math.random() * (data["3"].length + 1)),
-        Math.floor(Math.random() * (data["4"].length + 1)),
+        Math.floor(Math.random() * data["1"].length),
+        Math.floor(Math.random() * data["2"].length),
+        Math.floor(Math.random() * data["3"].length),
+        Math.floor(Math.random() * data["4"].length),
       ];
 
       this.text =
