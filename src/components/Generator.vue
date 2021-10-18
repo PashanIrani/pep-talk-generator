@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>{{ text }}</p>
-    <button @click="generate">Generate</button>
+    <button @click="generate">Generate Another</button>
   </div>
 </template>
 
@@ -14,12 +14,10 @@ export default {
     return { text: String };
   },
   created() {
-    console.log("created");
-    this.text = "";
+    this.generate();
   },
   methods: {
     generate() {
-      console.log(data);
       let picks = [
         Math.floor(Math.random() * data["1"].length),
         Math.floor(Math.random() * data["2"].length),
@@ -41,4 +39,10 @@ export default {
 </script>
 
 <style scoped>
+button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  font-family: Vintage, Helvetica, Arial, sans-serif;
+}
 </style>
